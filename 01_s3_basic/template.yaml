@@ -1,13 +1,11 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Simple S3 Bucket for Log Storage (First Step)
+Description: Simple S3 Bucket for Log Storage
 
 Resources:
-  # 学習記録用のログ保存バケット
   MyStudyLogBucket:
     Type: AWS::S3::Bucket
     Properties:
-      # バケット名は世界で一意である必要があるため、ランダムなサフィックス推奨
-      # ここではCloudFormationに名前生成を任せるためBucketNameを指定しない
+      # No BucketName specified to allow CloudFormation to generate a unique name
       AccessControl: Private
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
