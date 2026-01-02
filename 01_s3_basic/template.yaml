@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Simple S3 Bucket for Log Storage (First Step)
+
+Resources:
+  # 学習記録用のログ保存バケット
+  MyStudyLogBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      # バケット名は世界で一意である必要があるため、ランダムなサフィックス推奨
+      # ここではCloudFormationに名前生成を任せるためBucketNameを指定しない
+      AccessControl: Private
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      Tags:
+        - Key: Project
+          Value: AWS-Study-Log
+        - Key: Environment
+          Value: Dev
+
+Outputs:
+  BucketName:
+    Value: !Ref MyStudyLogBucket
+    Description: Name of the S3 bucket created
