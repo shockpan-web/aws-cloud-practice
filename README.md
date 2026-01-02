@@ -12,8 +12,9 @@ AWS認定ソリューションアーキテクト(SAA)取得および、実務で
 | :--- | :--- | :--- |
 | `00_init` | Repository Setup | Git, GitHub |
 | `01_s3_basic` | S3 Bucket (IaC) & CLI Deploy | CloudFormation, AWS CLI |
+| `02_s3_advanced` | **S3 Versioning & Lifecycle Rules** | CloudFormation, S3 |
 
-*(Upcoming: Versioning, Lifecycle Rules, EC2, VPC...)*
+*(Upcoming: EC2, VPC...)*
 
 ## 🛠️ Tech Stack
 * **Cloud Provider:** Amazon Web Services (AWS)
